@@ -79,7 +79,9 @@ Each click requires:
 ```
 These steps introduce multiple mandatory yields per iteration.
 
-`Even if Windows scheduler resolution is ~15.6 ms, AutoHotkey v1 cannot reliably execute one click per tick when using SetTimer.`\
+Conclusion:
+Even if Windows scheduler resolution is ~15.6 ms,
+`AutoHotkey v1 cannot reliably execute one click per tick using SetTimer.`\
 Each click requires multiple scheduler wake-ups and message dispatches.
 
 As a result, each click takes ~62 ms, limiting the speed to approximately 16 CPS.
