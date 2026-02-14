@@ -1,6 +1,5 @@
 # AUTOCLICKER
-on autohotkey_set_timer.ahk i have tried to make a simple autoclicker that could reach 100 CPS (Clicks Per Second).
-
+on autohotkey_set_timer.ahk i have tried to make a simple autoclicker that could reach 100 CPS (Clicks Per Second).\
 i did not want to use dll calls to test ahk native speeds and to not make the code too complicated.
 
 ---
@@ -18,8 +17,7 @@ Interval:  15.625 ms
 Max Speed: 64.000 CPS
 ```
 
-theoretically the script could do 64 CPS, but it efffectively caps at 16 CPS in Autohotkey v1.
-
+theoretically the script could do 64 CPS, but it efffectively caps at 16 CPS in Autohotkey v1.\
 the click intervals reported in the logs were ~62-63 ms, meaning 1 click every 4 Ticks
 
 i thought that it was because i had many yields:
@@ -49,8 +47,7 @@ for every loop iteration:
 10. AHK blocks again [Yield #2]
 ```
 
-at first i thought the additional 1-3 ticks were because of the FileAppend taking CPU time.
-
+at first i thought the additional 1-3 ticks were because of the FileAppend taking CPU time.\
 so i came up with this version that shows cps as a tooltip instead of logging to a file.
 
 [autoclicker set timer no i/o](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io.ahk)
@@ -136,7 +133,7 @@ ExitApp
 return
 ```
 
-but WM_TIMER (SetTimer) is low priority by defalt.
+but WM_TIMER (SetTimer) is low priority by defalt.\
 the speed was still 16 CPS, so the problem was not I/O or priority settings.
 
 Each click requires:
@@ -156,7 +153,8 @@ As a result, each click takes ~62 ms, limiting the speed to approximately 16 CPS
 
 i decided to keep the first version i had as it was already as fast as possible and stable enough.
 
-This limit is structural and cannot be overcome in AutoHotkey v1 without using higher-resolution timers, DLL calls, or native code.
+This limit is structural and cannot be overcome in AutoHotkey v1,\
+not without using higher-resolution timers, DLL calls, or native code.\
 i later used this as inspiration to build my rust autoclicker, as i wanted a faster and reliable autoclicker.
 
 
