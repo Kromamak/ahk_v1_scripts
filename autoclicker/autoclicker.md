@@ -2,7 +2,7 @@
 on autohotkey_set_timer.ahk i have tried to make a simple autoclicker that could reach 100 CPS (Clicks Per Second).
 i did not want to use dll calls to test ahk native speeds and to not make the code too complicated.
 
-!!! IMPORTANT !!!
+[!!! IMPORTANT !!!]
 SetTimer is limited by windows event scheduler.
 -
 Windows event scheduler resolution: 
