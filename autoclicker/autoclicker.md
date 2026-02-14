@@ -21,7 +21,7 @@ In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.
 The click intervals reported in the logs were 
 
 Initial measurements:\
-`CPS: ~16`
+`CPS: ~16`\
 `Intervals: ~62-63 ms`.
 
 meaning:\
