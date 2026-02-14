@@ -17,6 +17,7 @@ Frequency: 64hz
 Interval:  15.625 ms 
 Max Speed: 64.000 CPS
 ```
+
 theoretically the script could do 64 CPS, but it efffectively caps at 16 CPS in Autohotkey v1.
 
 the click intervals reported in the logs were ~62-63 ms, meaning 1 click every 4 Ticks
@@ -49,6 +50,7 @@ for every loop iteration:
 ```
 
 at first i thought the additional 1-3 ticks were because of the FileAppend taking CPU time.
+
 so i came up with this version that shows cps as a tooltip instead of logging to a file.
 
 ```
