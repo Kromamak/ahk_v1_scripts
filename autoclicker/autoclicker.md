@@ -60,7 +60,7 @@ i tried to run it at high priority adding: `Process, Priority,, High` ([autoclic
 
 ---
 > [!NOTE]
-> i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt.\
+> > i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt.\
 
 ---
 
