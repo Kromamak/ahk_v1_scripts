@@ -100,7 +100,11 @@ return
 
 no improvements, still 16 CPS
 i tried to run it at high priority adding: `Process, Priority,, High`
- ([File]( https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io_high_priority.ahk) )
+ ([File](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io_high_priority.ahk) )
+ 
+<details> 
+<summary>Click to expand</summary>
+    
 ```
 #Persistent
 #SingleInstance Force
@@ -140,6 +144,7 @@ Tooltip
 ExitApp
 return
 ```
+</details>
 
 but WM_TIMER (`SetTimer`) is low priority by defalt.\
 the speed was still 16 CPS, so the problem was not I/O or priority settings.
