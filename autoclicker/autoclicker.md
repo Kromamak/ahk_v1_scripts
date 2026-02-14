@@ -35,7 +35,8 @@ for every loop iteration:
 
 <details> 
 <summary>Click to expand</summary>
-    ```
+    
+```
 1. Click handler ends
 2. return
 3. AHK blocks in MsgWaitForMultipleObjects() [Yield #1]
@@ -49,7 +50,8 @@ for every loop iteration:
 8. ClickLoop executes
 9. return
 10. AHK blocks again [Yield #2]
-    ```</details>
+```
+</details>
 
 ## Attempt #1
 at first i thought the additional 1-3 ticks were because of `FileAppend` taking CPU time.\
