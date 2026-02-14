@@ -3,7 +3,7 @@ on autohotkey_set_timer.ahk i have tried to make a simple autoclicker that could
 i did not want to use dll calls to test ahk native speeds and to not make the code too complicated.
 
 > [!IMPORTANT]
-> SetTimer is limited by windows event scheduler.
+> > SetTimer is limited by windows event scheduler.
 
 Windows event scheduler resolution:
 > Frequency: 64hz \
