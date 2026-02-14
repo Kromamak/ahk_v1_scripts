@@ -134,11 +134,11 @@ but WM_TIMER (`SetTimer`) is low priority by defalt.\
 the speed was still 16 CPS, so the problem was not I/O or priority settings.
 
 > Each click requires:
-> 1. Blocking in the message loop \
-> 2. Waiting for WM_TIMER \
-> 3. Scheduler wake-up \
-> 4. Message dispatch \
-> 5. Handler execution\
+> 1. Blocking in the message loop 
+> 2. Waiting for WM_TIMER 
+> 3. Scheduler wake-up 
+> 4. Message dispatch 
+> 5. Handler execution
 > 6. Blocking again
 
 These steps introduce multiple mandatory yields per iteration.
