@@ -18,7 +18,10 @@ In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.
 > > Theoretically the script could do 64 CPS,\
 > > but it efffectively caps at 16 CPS in Autohotkey v1.
 
-The click intervals reported in the logs were `~62-63 ms`.
+The click intervals reported in the logs were 
+
+intervals:\
+`~62-63 ms`.
 
 meaning:\
 `1 click = 4 Ticks`
