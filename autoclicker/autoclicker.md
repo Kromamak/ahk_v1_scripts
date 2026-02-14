@@ -13,7 +13,7 @@ In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.
 `Objective: test native ahk speeds.`
 
 ## Considerations
-> [!IMPORTANT]
+> [!NOTE]
 > > SetTimer is limited by windows event scheduler.\
 > > Theoretically the script could do 64 CPS,\
 > > but it efffectively caps at 16 CPS in Autohotkey v1.
