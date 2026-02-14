@@ -95,7 +95,7 @@ ExitApp
 return
 ```
 </details>
-
+---
 no improvements, still 16 CPS
 i tried to run it at high priority adding: `Process, Priority,, High`
 [autoclicker_set_timer_no_io_high_priority]( 
