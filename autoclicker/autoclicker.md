@@ -4,8 +4,7 @@ i did not want to use dll calls to test ahk native speeds and to not make the co
 
 ---
 
-> **!!! IMPORTANT !!!**
->  
+[!**!!! IMPORTANT !!!**]
 > **[ SetTimer is limited by windows event scheduler. ]**
 
 ---
