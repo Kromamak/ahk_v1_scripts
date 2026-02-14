@@ -1,6 +1,7 @@
 # AUTOCLICKER
 > [!IMPORTANT]
 > > SetTimer is limited by windows event scheduler.
+
 > [!NOTE]
 > > Windows event scheduler resolution: \
 > > Frequency: 64hz \
