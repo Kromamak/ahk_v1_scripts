@@ -13,7 +13,8 @@ Max Speed: 64.000 CPS
 ```
 
 Theoretically the script could do 64 CPS,\
-but it efffectively caps at 16 CPS in Autohotkey v1.\
+but it efffectively caps at 16 CPS in Autohotkey v1.
+
 The click intervals reported in the logs were ~62-63 ms,\
 meaning 1 click every 4 Ticks.
 
