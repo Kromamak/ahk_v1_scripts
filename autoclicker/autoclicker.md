@@ -61,7 +61,7 @@ i tried to run it at high priority adding: `Process, Priority,, High` ([autoclic
 
 ---
 
-> [!NOTE]
+> [!CONCLUSIONS]
 > > SetTimer is limited by windows event scheduler.\
 > > Theoretically the script could do 64 CPS,\
 > > but it efffectively caps at 16 CPS in Autohotkey v1.
