@@ -1,5 +1,6 @@
 # AUTOCLICKER
 on autohotkey_set_timer.ahk i have tried to make a simple autoclicker that could reach 100 CPS (Clicks Per Second).
+
 i did not want to use dll calls to test ahk native speeds and to not make the code too complicated.
 
 ---
@@ -17,6 +18,7 @@ Interval:  15.625 ms
 Max Speed: 64.000 CPS
 ```
 theoretically the script could do 64 CPS, but it efffectively caps at 16 CPS in Autohotkey v1.
+
 the click intervals reported in the logs were ~62-63 ms, meaning 1 click every 4 Ticks
 
 i thought that it was because i had many yields:
