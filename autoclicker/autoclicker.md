@@ -4,8 +4,7 @@ i did not want to use dll calls to test ahk native speeds and to not make the co
 
 > [!IMPORTANT]
 > > SetTimer is limited by windows event scheduler.
-
-Windows event scheduler resolution:
+> Windows event scheduler resolution:
 > Frequency: 64hz \
 > Interval:  15.625 ms \
 > Max Speed: 64.000 CPS
