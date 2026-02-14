@@ -33,6 +33,8 @@ return:     inside loop, mandatory
 
 for every loop iteration:
 
+<details> 
+<summary>Click to expand</summary>
 ```
 1. Click handler ends
 2. return
@@ -48,6 +50,8 @@ for every loop iteration:
 9. return
 10. AHK blocks again [Yield #2]
 ```
+</details>
+
 ## Attempt #1
 at first i thought the additional 1-3 ticks were because of `FileAppend` taking CPU time.\
 so i came up with this version that shows cps as a tooltip instead of logging to a file.
