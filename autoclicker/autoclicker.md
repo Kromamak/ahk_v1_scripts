@@ -55,6 +55,8 @@ at first i thought the additional 1-3 ticks were because of `FileAppend` taking 
 so i came up with this version that shows cps as a tooltip instead of logging to a file.([autoclicker set timer no i/o](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io.ahk))
 > no improvements, still 16 CPS
 
+---
+
 ## Attempt #2
 i tried to run it at high priority adding: `Process, Priority,, High` ([autoclicker set timer no i/o high priority](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io_high_priority.ahk))
 > the speed was still 16 CPS, so the problem was not I/O or priority settings.
