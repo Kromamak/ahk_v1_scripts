@@ -53,7 +53,7 @@ at first i thought the additional 1-3 ticks were because of the FileAppend takin
 
 so i came up with this version that shows cps as a tooltip instead of logging to a file.
 
-[autoclicker_set_timer_no_io](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io.ahk)
+[autoclicker set timer no i/o](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io.ahk)
 ```
 #Persistent
 #SingleInstance Force
