@@ -64,6 +64,7 @@ i tried to run it at high priority adding: `Process, Priority,, High` ([autoclic
 
 ---
 
+## Final Considerations
 ```
 Each click requires:  
 1. Blocking in the message loop  
@@ -73,8 +74,6 @@ Each click requires:
 5. Handler execution  
 6. Blocking again  
 ```
-
-## Final Considerations
 These steps introduce multiple mandatory yields per iteration.
 
 Even if Windows scheduler resolution is ~15.6 ms, AutoHotkey v1 cannot reliably execute one click per tick when using SetTimer.
