@@ -12,8 +12,6 @@ In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.
 `Contraints: no high-resolution timers or dll calls`\
 `Objective: test native ahk speeds.`
 
-```
-
 ## Considerations
 > [!IMPORTANT]
 > > SetTimer is limited by windows event scheduler.
