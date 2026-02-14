@@ -20,11 +20,9 @@ In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.
 
 The click intervals reported in the logs were 
 
-CPS:\
-`~16`
-
-intervals:\
-`~62-63 ms`.
+Initial measurements:\
+`CPS: ~16`
+`Intervals: ~62-63 ms`.
 
 meaning:\
 `1 click = 4 Ticks`
