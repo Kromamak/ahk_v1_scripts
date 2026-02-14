@@ -64,8 +64,9 @@ i tried to run it at high priority adding: `Process, Priority,, High` ([autoclic
 > the speed was still 16 CPS, so the problem was not I/O or priority settings.
 
 ---
+
 > [!NOTE]
-> > i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt.\
+> > i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt.
 
 ---
 
