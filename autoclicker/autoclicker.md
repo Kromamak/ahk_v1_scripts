@@ -52,7 +52,7 @@ for every loop iteration:
 at first i thought the additional 1-3 ticks were because of the FileAppend taking CPU time.
 
 so i came up with this version that shows cps as a tooltip instead of logging to a file.
-
+[autoclicker_set_timer_no_io](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io.ahk)
 ```
 #Persistent
 #SingleInstance Force
@@ -94,7 +94,7 @@ return
 
 no improvements, still 16 CPS
 i tried to run it at high priority adding: "Process, Priority,, High"
-
+[autoclicker_set_timer_no_io_high_priority]( 
 ```
 #Persistent
 #SingleInstance Force
