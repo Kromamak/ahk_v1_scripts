@@ -13,10 +13,6 @@ In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.
 `Objective: test native ahk speeds.`
 
 ## Considerations
-> [!NOTE]
-> > SetTimer is limited by windows event scheduler.\
-> > Theoretically the script could do 64 CPS,\
-> > but it efffectively caps at 16 CPS in Autohotkey v1.
 
 Initial measurements:\
 `CPS: ~16`\
@@ -62,6 +58,13 @@ so i came up with this version that shows cps as a tooltip instead of logging to
 ## Attempt #2
 i tried to run it at high priority adding: `Process, Priority,, High` ([autoclicker set timer no i/o high priority](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io_high_priority.ahk))
 > the speed was still 16 CPS, so the problem was not I/O or priority settings.
+
+---
+
+> [!NOTE]
+> > SetTimer is limited by windows event scheduler.\
+> > Theoretically the script could do 64 CPS,\
+> > but it efffectively caps at 16 CPS in Autohotkey v1.
 
 ---
 
