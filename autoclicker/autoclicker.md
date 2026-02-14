@@ -77,14 +77,16 @@ Each click requires:
 These steps introduce multiple mandatory yields per iteration.
 
 --
-
 Even if Windows scheduler resolution is ~15.6 ms, AutoHotkey v1 cannot reliably execute one click per tick when using SetTimer.
 Each click requires multiple scheduler wake-ups and message dispatches.
 
+--
 As a result, each click takes ~62 ms, limiting the speed to approximately 16 CPS.
 
+--
 i decided to keep the first version i had as it was already as fast as possible and stable enough.
 
+--
 This limit is structural and cannot be overcome in AutoHotkey v1,\
 not without using higher-resolution timers, DLL calls, or native code.\
 i later used this as inspiration to build my rust autoclicker, as i wanted a faster and reliable autoclicker.
