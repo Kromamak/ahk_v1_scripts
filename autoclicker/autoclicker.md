@@ -40,7 +40,6 @@ for every loop iteration:
 9. return
 10. AHK blocks again [Yield #2]
 ```
----
 
 at first i thought the additional 1-3 ticks were because of the FileAppend taking CPU time.
 so i came up with this version that shows cps as a tooltip instead of logging to a file.
