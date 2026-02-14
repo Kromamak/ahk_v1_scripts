@@ -14,9 +14,9 @@ In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.
 
 ## Considerations
 > [!IMPORTANT]
-> > SetTimer is limited by windows event scheduler.
-Theoretically the script could do 64 CPS,\
-but it efffectively caps at 16 CPS in Autohotkey v1.
+> > SetTimer is limited by windows event scheduler.\
+> > Theoretically the script could do 64 CPS,\
+> > but it efffectively caps at 16 CPS in Autohotkey v1.
 
 The click intervals reported in the logs were `~62-63 ms`.
 
