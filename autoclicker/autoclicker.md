@@ -47,7 +47,7 @@ for every loop iteration:
 9. return
 10. AHK blocks again [Yield #2]
 ```
-
+---
 ## Attempt #1
 at first i thought the additional 1-3 ticks were because of `FileAppend` taking CPU time.\
 so i came up with this version that shows cps as a tooltip instead of logging to a file.
@@ -148,6 +148,9 @@ return
 
 but WM_TIMER (`SetTimer`) is low priority by defalt.\
 the speed was still 16 CPS, so the problem was not I/O or priority settings.
+
+---
+
 ```
 Each click requires:  
 1. Blocking in the message loop  
