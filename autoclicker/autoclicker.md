@@ -55,7 +55,7 @@ so i came up with this version that shows cps as a tooltip instead of logging to
 ---
 
 no improvements, still 16 CPS
-i tried to run it at high priority adding: `Process, Priority,, High` ([File](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io_high_priority.ahk))
+i tried to run it at high priority adding: `Process, Priority,, High` ([autoclicker set timer no i/o high priority](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io_high_priority.ahk))
 
 but WM_TIMER (`SetTimer`) is low priority by defalt.\
 the speed was still 16 CPS, so the problem was not I/O or priority settings.
