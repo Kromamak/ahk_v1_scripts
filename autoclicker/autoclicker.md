@@ -1,7 +1,4 @@
 # AUTOCLICKER
-> [!IMPORTANT]
-> > SetTimer is limited by windows event scheduler.
-
 > [!NOTE]
 > > Windows event scheduler resolution: \
 > > Frequency: 64hz \
@@ -16,6 +13,8 @@ i did not want to use dll calls to test ahk native speeds\
 and to not make the code too complicated.
 
 ## Considerations
+> [!IMPORTANT]
+> > SetTimer is limited by windows event scheduler.
 Theoretically the script could do 64 CPS,\
 but it efffectively caps at 16 CPS in Autohotkey v1.
 
@@ -76,16 +75,16 @@ Each click requires:
 ```
 These steps introduce multiple mandatory yields per iteration.
 
---
-Even if Windows scheduler resolution is ~15.6 ms, AutoHotkey v1 cannot reliably execute one click per tick when using SetTimer.
+Even if Windows scheduler resolution is ~15.6 ms, \
+AutoHotkey v1 cannot reliably execute one click per tick when using SetTimer.\
 Each click requires multiple scheduler wake-ups and message dispatches.
---
+
 As a result, each click takes ~62 ms, limiting the speed to approximately 16 CPS.
---
+
 i decided to keep the first version i had as it was already as fast as possible and stable enough.
---
+
 This limit is structural and cannot be overcome in AutoHotkey v1,\
 not without using higher-resolution timers, DLL calls, or native code.\
 i later used this as inspiration to build my rust autoclicker, as i wanted a faster and reliable autoclicker.
---
+
 
