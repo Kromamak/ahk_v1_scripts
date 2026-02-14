@@ -7,11 +7,11 @@
 
 ## Intro
 In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.
--
-could reach 100 CPS (Clicks Per Second).
 
-i did not want to use dll calls to test ahk native speeds\ 
-and to not make the code too complicated.
+`target CPS: 100`
+
+contraints: no high-resolution timers or dll calls \
+to test ahk speeds and to simpler.
 
 ## Considerations
 > [!IMPORTANT]
