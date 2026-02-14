@@ -9,8 +9,11 @@
 > > Max Speed: 64.000 CPS
 
 ## Intro
-on autohotkey_set_timer.ahk i have tried to make a simple autoclicker that could reach 100 CPS (Clicks Per Second).\
-i did not want to use dll calls to test ahk native speeds and to not make the code too complicated.
+In autohotkey_set_timer.ahk i wanted to make a simple autoclicker.\
+
+that could reach 100 CPS (Clicks Per Second).\
+i did not want to use dll calls to test ahk native speeds\ 
+and to not make the code too complicated.
 
 ## Considerations
 Theoretically the script could do 64 CPS,\
