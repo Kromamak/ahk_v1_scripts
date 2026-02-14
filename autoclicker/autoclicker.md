@@ -17,9 +17,13 @@ the click intervals reported in the logs were ~62-63 ms, meaning 1 click every 4
 i thought that it was because i had many yields:
 
 SetTimer:   outside loop
+
 Sleep:      outside loop, startup/exit
+
 FileAppend: inside loop, ~1ms
+
 Click:      inside loop, calls "SendInput" to kernel
+
 return:     inside loop, mandatory
 
 for every loop iteration:
