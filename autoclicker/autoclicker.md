@@ -100,7 +100,7 @@ return
 
 no improvements, still 16 CPS
 i tried to run it at high priority adding: `Process, Priority,, High`
- ([File](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io_high_priority.ahk) )
+ ( [File](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer_no_io_high_priority.ahk) )
  
 <details> 
 <summary>Click to expand</summary>
