@@ -14,7 +14,7 @@ Target CPS: `100`\
 Objectives: `test native ahk speeds.`\
 Contraints: `no high-resolution timers or dll calls`
 
-### File:
+### File: [autoclicker_setr_timer] (
 
 ---
 
@@ -33,14 +33,6 @@ then:\
 meaning:\
 `1 click = 4 Ticks`
 
-i thought the 4 ticks were because:
-```
-ClickLooop:
-tick #1-2: write to logs (FileAppend)
-tick #3: click injection (Click)
-tick #4: new timer in queue
-```
-
 so far in my script we have:
 ```
 SetTimer:   outside loop
@@ -49,6 +41,17 @@ FileAppend: inside loop, ~1ms
 Click:      inside loop, calls "SendInput" to kernel
 return:     inside loop, mandatory
 ```
+so iside the ClickLoop we only have `FileAppend` and `Click` + the mandatory `return`
+
+i initially thought the 4 ticks were because:
+```
+ClickLooop:
+tick #1-2: write to logs (FileAppend)
+tick #3: click injection (Click)
+tick #4: new timer in queue
+```
+the main offender is `fileAppend`
+
 ---
 
 ## Attempt #1
@@ -65,12 +68,8 @@ i tried to run it at high priority adding: `Process, Priority,, High` ([autoclic
 i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt and is not controlled by thread priority
 
 ---
-
-## Final Considerations
-> [!IMPORTANT]
-> > SetTimer is limited by windows event scheduler.\
-> > Theoretically the script could do 64 CPS,\
-> > but it efffectively caps at 16 CPS in Autohotkey v1.
+## Timings
+I later researched timings for each operation.
 
 | Operation   | Cost  |
 | ----------- | ----- |
@@ -80,6 +79,16 @@ i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt and is n
 | return      | ~ns   |
 
 event scheduler tick: 15.625 ms
+
+so all operations should fit in a single tick.
+
+---
+
+## Final Considerations
+> [!IMPORTANT]
+> > SetTimer is limited by windows event scheduler.\
+> > Theoretically the script could do 64 CPS,\
+> > but it efffectively caps at 16 CPS in Autohotkey v1.
 
 Autohotkey uses `MsgWaitForMultipleObjects()` instead of `sleep()`.
 
