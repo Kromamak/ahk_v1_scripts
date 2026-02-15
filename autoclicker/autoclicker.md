@@ -69,7 +69,7 @@ i tried to run it at high priority adding: `Process, Priority,, High` ([autoclic
 ---
 
 > [!NOTE]
-> > i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt.
+> > i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt and is not controlled by thread priority
 
 ---
 
@@ -82,6 +82,12 @@ Each click requires:
 4. Message dispatch  
 5. Handler execution  
 6. Blocking again  
+```
+```
+1 tick: timer expiration
+1 tick: message delivery
+1 tick: click injection + return
+1 tick: re-idle and eligible again
 ```
 These steps introduce multiple mandatory yields per iteration.
 
