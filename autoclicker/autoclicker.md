@@ -24,8 +24,22 @@ Initial measurements:\
 `CPS: ~16`\
 `Intervals: ~62-63 ms`
 
+1 scheduler tick:\
+`15.625 ms`
+
+then:\
+`15.625 x 4 = 62.5`
+
 meaning:\
 `1 click = 4 Ticks`
+
+i thought the 4 ticks were because:
+```
+ClickLooop:
+tick #1-2: write to logs (FileAppend)
+tick #3: click injection (Click)
+tick #4: new timer in queue
+```
 
 so far in my script we have:
 ```
@@ -34,49 +48,6 @@ Sleep:      outside loop, startup/exit
 FileAppend: inside loop, ~1ms
 Click:      inside loop, calls "SendInput" to kernel
 return:     inside loop, mandatory
-```
-
-i then thought the 4 ticks were because:
-```
-Initial Hypothesis:
-tick #1: timer expiration
-tick #2: click injection (
-tick #3: write to logs (FileAppend)
-tick #4: new timer in queue
-```
-
-i thought that it was because i had many yields:
-```
-for every loop iteration:
-1. Click handler ends
-2. return
-3. AHK blocks in MsgWaitForMultipleObjects() [Yield #1]
-4. Windows timer expires
-5. WM_TIMER posted to message queue
-6. Scheduler resumes AHK thread [Yield #1 ends]
-7. Message is dispatched
-8. ClickLoop executes
-9. return
-10. AHK blocks again [Yield #2]
-```
-(yield = thread stops running and lets the OS scheduler run something else.)
-
-```
-for every loop iteration:
-1. Windows timer expires
-2. WM_TIMER is queued
-3. Thread becomes runnable
-4. Message is dispatched
-5. Click handler executes (including logging)
-6. AHK returns to MsgWaitForMultipleObjects() (thread idle)
-```
-
-so far we have:
-```
-1. timer expiration
-2. message delivery
-3. click injection + return
-4. re-idle and eligible again
 ```
 ---
 
@@ -107,6 +78,8 @@ i later discovered that WM_TIMER (`SetTimer`) is low priority by defalt and is n
 | SendInput   | ~μs   |
 | FileAppend  | ~1 ms |
 | return      | ~ns   |
+
+event scheduler tick: 15.625 ms
 
 Autohotkey uses `MsgWaitForMultipleObjects()` instead of `sleep()`.
 
