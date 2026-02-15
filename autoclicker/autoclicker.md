@@ -14,7 +14,7 @@ Target CPS: `100`\
 Objectives: `test native ahk speeds.`\
 Contraints: `no high-resolution timers or dll calls`
 
-### File: [autoclicker_setr_timer] (
+### File: [autoclicker_set_timer.ahk](https://github.com/Kromamak/ahk_v1_scripts/blob/main/autoclicker/autoclicker_set_timer.ahk)
 
 ---
 
